@@ -1,0 +1,120 @@
+:root {
+    --card-BG: hsl(0, 0%, 100%);
+    --card-BG2: hsl(225, 100%, 98%);
+    --main-BG: hsl(225, 100%, 94%);
+    --main-CR: hsl(224, 23%, 55%);
+    --second-CR2: hsl(223, 47%, 23%);
+    --second-CR: hsl(245, 75%, 52%);
+    --card-width: 335px;
+}
+*, :after, :before {
+    box-sizing: border-box;
+}
+a {
+    font-size: 14px;
+    font-weight: bold;
+}
+p {
+    margin: 0;
+}
+h4, h2 {
+    color: var(--second-CR2);
+}
+body {
+    text-align: center;
+    font-family: 'Red Hat Display', sans-serif;
+    line-height: 1.5;
+    color: var(--main-CR);
+    margin: 0px;
+    background-image: url(images/pattern-background-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: var(--main-BG);
+    position: relative;
+    height: 100vh;
+}
+.card {
+    background-color: var(--card-BG);
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    width: var(--card-width);
+    border-radius: 20px;
+    transform: translate(50%, -50%);
+}
+.card>img {
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+}
+.card-container {
+    padding: 0 20px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.card-container p {
+    padding: 0px 15px;
+}
+.plan {
+    background-color: var(--card-BG2);
+    display: flex;
+    padding: 15px;
+    align-items: center;
+    width: 100%;
+    border-radius: 10px;
+    margin: 20px 0 10px;
+}
+.price {
+    margin: 0 auto 0 20px;
+}
+.price h4 {
+    margin: 0px;
+}
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    margin: 15px 0;
+    width: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    background-color: var(--second-CR);
+    color: var(--card-BG);
+    font-weight: bold;
+    font-size: 16px;
+}
+button:first-of-type:hover,button:first-of-type:focus {
+    background-color: #766cf1;
+}
+a:hover,a:focus {
+    color: #766cf1;
+    text-decoration: none;
+}
+button:last-of-type:hover,button:last-of-type:focus {
+    color: var(--second-CR2);
+}
+a, button {
+    transition: all 0.3s ease-in-out;
+}
+button:first-of-type {
+    box-shadow: 0px 15px 15px 0px #dddaf9;
+}
+button:last-of-type {
+    width: fit-content;
+    height: fit-content;
+    background-color: transparent;
+    color: var(--main-CR);
+}
+@media (min-width: 1040px) {
+    :root {
+        --card-width: 405px;
+    }
+    body {
+        background-image: url(images/pattern-background-desktop.svg);
+    }
+    .card-container {
+        padding: 0 40px 40px;
+    }
+}
